@@ -1,0 +1,31 @@
+{
+  "name": "multiAppBackend",
+  "description": "a backend for Multi App handler",
+  "type": "module",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "dev": "nodemon index.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "morgan": "^1.10.0",
+    "nodemon": "^3.0.3"
+  },
+  "keywords": [
+    "javascript",
+    "backend",
+    "Multi",
+    "eCommerce",
+    "chat socket",
+    "fooddelivery"
+  ],
+  "author": "Naveed Ahmad",
+  "socialMedia": {
+    "github": "https://github.com/naveedgeh",
+    "linkedin": "https://www.linkedin.com/in/naveed-ahmad-full-stack-developer/"
+  }
+}
