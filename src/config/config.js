@@ -20,4 +20,10 @@ export const config = {
   mongoose: {
     url: envVars.MONGODB_URL,
   },
+  key: {
+    accesskey: envVars.ACCESSSECRETKEY,
+    refreshkey: envVars.REFRESHSECRETKEY,
+    assessExpire: envVars.ACCESS_TOKEN_EXPIRY,
+    refreshExpire: envVars.REFRESH_TOKEN_EXPIRY,
+  },
 };
