@@ -17,8 +17,15 @@ const { value: envVars, error } = envVarsSchema
 export const config = {
   env: envVars.NODE_ENV,
   port: envVars.PORT,
-  mongoose: {
-    url: envVars.MONGODB_URL,
+  database: {
+    url: envVars.DATABASE_URL,
+    type:envVars.DATABASE_TYPE || 'mongodb',
+    dbname:envVars.DB_Name,
+    host:envVars.HOST || "",
+    username:envVars.USERMNAME || "",
+    password:envVars.PASSWORD || "",
+    port:envVars.DBPORT || "",
+    schema:envVars.SCHEMA || "",
   },
   key: {
     accesskey: envVars.ACCESSSECRETKEY,
