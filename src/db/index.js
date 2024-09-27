@@ -1,13 +1,18 @@
-import mongoose from "mongoose";
-import { config } from "../config/config.js";
-
-const connect = async () => {
-  try {
-    const dbConnect = await mongoose.connect(config.mongoose.url);
-    console.log("\n database is connected", dbConnect.connection.host);
-  } catch (error) {
-    console.log("Database is not connecte", error);
-    process.exit(1);
+import databaseConfig from "./config.js";
+import { mongoDbConnection,connectPostgresql } from "./connection.js";
+const connect = async (type) => {
+  const details=databaseConfig[type];
+  switch (type) {
+    case "mongodb":
+     await mongoDbConnection(details.url,details.dbname);
+      break;
+    case "postgresql":
+        await connectPostgresql(details.url);
+        break;
+    default:
+        console.log("\n please check database configuration");
+      throw new Error("Database not configure");
+      break;
   }
 };
 

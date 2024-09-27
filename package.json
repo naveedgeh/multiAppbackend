@@ -17,7 +17,8 @@
     "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.1.1",
     "morgan": "^1.10.0",
-    "nodemon": "^3.0.3"
+    "nodemon": "^3.0.3",
+    "prisma": "^5.20.0"
   },
   "keywords": [
     "javascript",
@@ -31,5 +32,8 @@
   "socialMedia": {
     "github": "https://github.com/naveedgeh",
     "linkedin": "https://www.linkedin.com/in/naveed-ahmad-full-stack-developer/"
+  },
+  "dependencies": {
+    "@prisma/client": "^5.20.0"
   }
 }
